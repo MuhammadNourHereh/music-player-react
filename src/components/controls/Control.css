@@ -1,0 +1,24 @@
+.control {
+    display: inline-block;
+    cursor: pointer;
+    /* Makes the icon look clickable */
+    padding: 8px;
+    /* Optional padding for better click area */
+    border-radius: 4px;
+    /* Add rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Smooth hover and active effects */
+}
+
+.control:active {
+    transform: scale(0.95);
+    /* Add a slight "press" effect */
+    background-color: #e0e0e0;
+    /* Optional darker background for active state */
+}
+
+.control .fa-icon:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    /* Adds shadow around the icon */
+}
