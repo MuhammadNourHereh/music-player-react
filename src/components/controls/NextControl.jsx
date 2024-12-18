@@ -1,11 +1,13 @@
-import { faForward } from '@fortawesome/free-solid-svg-icons'
+import { faForwardFast } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useContext } from 'react'
+import { AudioContext } from '../../AudioContext'
 
 const NextControl = () => {
+  const {nextTrack} = useContext(AudioContext)
   return (
     <div className='control'>
-      <FontAwesomeIcon icon={faForward} />
+      <FontAwesomeIcon icon={faForwardFast} onClick={nextTrack}/>
     </div>
   )
 }

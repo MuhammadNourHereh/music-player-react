@@ -1,5 +1,11 @@
 .app {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    background-color: lightgreen;
+}
+.player {
+    padding: 5px; 
+    border: 1px solid green;
 }

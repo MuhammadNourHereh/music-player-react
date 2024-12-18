@@ -1,14 +1,15 @@
-import { faBackward } from '@fortawesome/free-solid-svg-icons'
+import { faBackwardFast, faForward } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
-import './Control.css'
+import React, { useContext } from 'react'
+import { AudioContext } from '../../AudioContext'
 
 const PreviousControl = () => {
-    return (
-        <div className='control'>
-            <FontAwesomeIcon icon={faBackward} />
-        </div>
-    )
+  const {previousTrack} = useContext(AudioContext)
+  return (
+    <div className='control'>
+      <FontAwesomeIcon icon={faBackwardFast} onClick={previousTrack}/>
+    </div>
+  )
 }
 
 export default PreviousControl

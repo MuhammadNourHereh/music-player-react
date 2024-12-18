@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Title.css'
-const Title = ({ title, subtitle }) => {
+import { AudioContext } from '/src/AudioContext.jsx';
+
+const Title = () => {
+    const { title, subtitle } = useContext(AudioContext)
     return (
         <>
             <span className='title'>{title}</span><br />
-            <span className='subtitle'>subtitle</span>
+            <span className='subtitle'>{subtitle}</span>
         </>
     )
 }
